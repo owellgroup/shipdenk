@@ -19,7 +19,7 @@ const Inventory = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-24 md:pt-28 pb-16 px-4">
+      <div className="pt-36 md:pt-40 pb-16 px-4">
         <div className="container mx-auto">
           <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">Our Inventory</h1>
           <p className="text-muted-foreground mb-8">Browse {filtered.length} vehicles</p>

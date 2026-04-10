@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 const Contact = () => (
   <div className="min-h-screen bg-background">
     <Header />
-    <div className="pt-24 md:pt-28 pb-16 px-4">
+    <div className="pt-36 md:pt-40 pb-16 px-4">
       <div className="container mx-auto max-w-3xl">
         <h1 className="font-display text-4xl font-bold text-foreground mb-4">Contact Us</h1>
         <p className="text-muted-foreground text-lg mb-8">We'd love to hear from you. Reach out anytime.</p>
@@ -13,8 +13,8 @@ const Contact = () => (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[
             { icon: MapPin, title: "Visit Us", text: "Windhoek, Namibia" },
-            { icon: Phone, title: "Call Us", text: "+264 81 123 4567" },
-            { icon: Mail, title: "Email Us", text: "info@shipdenk.com" },
+            { icon: Phone, title: "Call Us", text: "+264 81 312 0182" },
+            { icon: Mail, title: "Email Us", text: "info@ndjiva.com" },
           ].map((item) => (
             <div key={item.title} className="bg-card border border-border rounded-xl p-6 text-center">
               <item.icon className="w-6 h-6 text-primary mx-auto mb-3" />

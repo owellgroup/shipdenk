@@ -7,7 +7,14 @@ const Footer = () => (
     <div className="container mx-auto px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <img src={logo} alt="Shipdenk" className="h-12 mb-4" />
+          <img
+            src={logo}
+            alt="Ndiva Auto"
+            width={1000}
+            height={400}
+            className="h-auto w-full max-w-md md:max-w-lg lg:max-w-2xl mb-6 object-contain object-left"
+            decoding="async"
+          />
           <p className="text-sm text-muted-foreground leading-relaxed">
             Your trusted dealership for quality pre-owned vehicles. Drive your dreams home today.
           </p>
@@ -26,8 +33,8 @@ const Footer = () => (
           <h4 className="font-display font-bold text-foreground mb-4">Contact</h4>
           <div className="flex flex-col gap-3 text-sm text-muted-foreground">
             <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary" />Windhoek, Namibia</span>
-            <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" />+264 81 123 4567</span>
-            <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" />info@shipdenk.com</span>
+            <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" />+264 81 312 0182</span>
+            <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" />info@ndjiva.com</span>
           </div>
         </div>
 
@@ -42,7 +49,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-border mt-8 pt-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Shipdenk. All rights reserved.
+        © {new Date().getFullYear()} Ndiva Auto. All rights reserved.
       </div>
     </div>
   </footer>

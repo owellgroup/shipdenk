@@ -27,7 +27,7 @@ const Index = () => {
       <Header />
 
       {/* Hero */}
-      <section className="pt-24 md:pt-32 pb-16 px-4">
+      <section className="pt-36 md:pt-44 pb-16 px-4">
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left - Search */}
           <div className="animate-fade-up">

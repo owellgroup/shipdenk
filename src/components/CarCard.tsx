@@ -1,4 +1,4 @@
-import { Car } from "@/data/cars";
+import { Car, formatCarPrice } from "@/data/cars";
 import { Link } from "react-router-dom";
 import { Fuel, Gauge, Settings2 } from "lucide-react";
 
@@ -29,7 +29,7 @@ const CarCard = ({ car }: { car: Car }) => {
             <p className="text-muted-foreground text-sm">{car.year}</p>
           </div>
           <p className="font-display font-bold text-primary text-lg whitespace-nowrap">
-            N${car.price.toLocaleString()}
+            {formatCarPrice(car)}
           </p>
         </div>
 

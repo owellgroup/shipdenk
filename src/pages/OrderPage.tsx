@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { cars } from "@/data/cars";
+import { cars, formatCarPrice } from "@/data/cars";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowLeft, CheckCircle } from "lucide-react";
@@ -39,7 +39,7 @@ const OrderPage = () => {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="pt-24 md:pt-28 pb-16 px-4 flex items-center justify-center min-h-[70vh]">
+        <div className="pt-36 md:pt-40 pb-16 px-4 flex items-center justify-center min-h-[70vh]">
           <div className="text-center animate-fade-up">
             <CheckCircle className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
             <h2 className="font-display text-2xl font-bold text-foreground mb-2">Order Confirmed!</h2>
@@ -59,7 +59,7 @@ const OrderPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-24 md:pt-28 pb-16 px-4">
+      <div className="pt-36 md:pt-40 pb-16 px-4">
         <div className="container mx-auto max-w-3xl">
           <Link to={`/car/${car.id}`} className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-6 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Details
@@ -75,7 +75,7 @@ const OrderPage = () => {
                 <img src={car.image} alt={car.name} className="w-20 h-14 rounded-lg object-cover" />
                 <div>
                   <p className="font-semibold text-foreground">{car.name}</p>
-                  <p className="text-primary font-bold">N${car.price.toLocaleString()}</p>
+                  <p className="text-primary font-bold">{formatCarPrice(car)}</p>
                 </div>
               </div>
 
@@ -118,7 +118,7 @@ const OrderPage = () => {
                     { label: "Bank Name", value: "First National Bank" },
                     { label: "Branch Name", value: "Windhoek Main" },
                     { label: "Branch Code", value: "280172" },
-                    { label: "Beneficiary", value: "Shipdenk Auto" },
+                    { label: "Beneficiary", value: "Ndiva Auto" },
                     { label: "Account No.", value: "62845901234" },
                   ].map((item) => (
                     <div key={item.label} className="flex justify-between">

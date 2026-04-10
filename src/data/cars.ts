@@ -1,12 +1,12 @@
-import poloGold from "@/assets/cars/polo-gold.jpeg";
-import poloRed from "@/assets/cars/polo-red.jpeg";
-import mercedesBlack from "@/assets/cars/mercedes-black.jpeg";
-import golfSilver from "@/assets/cars/golf-silver.jpeg";
-import bmwWhite from "@/assets/cars/bmw-white.jpeg";
-import bmwBlack from "@/assets/cars/bmw-black.jpeg";
-import audiQ3 from "@/assets/cars/audi-q3.jpeg";
-import audiA3 from "@/assets/cars/audi-a3.jpeg";
-import poloNewRed from "@/assets/cars/polo-new-red.jpeg";
+import audiA3Img from "@/assets/cars/Audi A3 - 2015model - Panaromic sunroof - Leather seats - 76000KM - lots of extras - available o.jpg";
+import audiQ7Img from "@/assets/cars/Audi Q7 Quattro - 2016model - 78000KM - Seven seats - Panaromic sunroof - Black leather seats - .jpg";
+import discoverySportImg from "@/assets/cars/Discovery Sport - 2017model - Panaromic sunroof - 73999KM - available on order price is N$175 00.jpg";
+import jaguarFpaceImg from "@/assets/cars/Jaguar F-PACE 25T Prestige (RWD) - 2018model - Panaromic sunroof - Black interior seats - 92000K.jpg";
+import mazdaCx3Img from "@/assets/cars/Mazda Cx3 - 2018model - Sunroof - Leather seats - 98000KM - well maintained - available on order.jpg";
+import mazdaDemioImg from "@/assets/cars/Mazda Demio - 64000 - 2014model - available on order price is N$75 000 shipping&Namra included d.jpg";
+import mercedesA250Img from "@/assets/cars/Mercedes Benz A250 - 2015model - Panaromic sunroof - 98000KM - available on order price is N$138.jpg";
+import vwGolf7rImg from "@/assets/cars/Volkswagen Golf 7R - 2015model - 71999KM - Panaromic sunroof - Black Leather Interior - lots of .jpg";
+import vwTouranImg from "@/assets/cars/Volkswagen Touran - 2016model - 99899KM - Leather seats - Double sunroof - available on order pr (1).jpg";
 
 export interface Car {
   id: string;
@@ -14,6 +14,7 @@ export interface Car {
   make: string;
   model: string;
   type: string;
+  /** N$; use 0 for price on request */
   price: number;
   kilometers: number;
   fuel: "Petrol" | "Diesel" | "Hybrid" | "Electric";
@@ -28,149 +29,172 @@ export interface Car {
 export const cars: Car[] = [
   {
     id: "1",
-    name: "Volkswagen Polo TSI",
-    make: "Volkswagen",
-    model: "Polo",
+    name: "Audi A3",
+    make: "Audi",
+    model: "A3",
     type: "Hatchback",
-    price: 189000,
-    kilometers: 45000,
+    price: 0,
+    kilometers: 76000,
     fuel: "Petrol",
-    transmission: "Manual",
-    year: 2019,
+    transmission: "Automatic",
+    year: 2015,
     status: "Available",
-    image: poloGold,
-    images: [poloGold],
-    description: "Well-maintained VW Polo in beautiful gold. Economical and reliable daily driver.",
+    image: audiA3Img,
+    images: [audiA3Img],
+    description:
+      "2015 Audi A3 with panoramic sunroof, leather seats, and lots of extras. Well specified and available on order.",
   },
   {
     id: "2",
-    name: "Volkswagen Polo GP",
-    make: "Volkswagen",
-    model: "Polo",
-    type: "Hatchback",
-    price: 175000,
-    kilometers: 62000,
-    fuel: "Petrol",
-    transmission: "Manual",
-    year: 2018,
-    status: "Available",
-    image: poloRed,
-    images: [poloRed],
-    description: "Sporty red Polo GP with low mileage. Perfect city car with excellent fuel economy.",
-  },
-  {
-    id: "3",
-    name: "Mercedes-Benz E-Class AMG",
-    make: "Mercedes-Benz",
-    model: "E-Class",
-    type: "Sedan",
-    price: 485000,
+    name: "Audi Q7 Quattro",
+    make: "Audi",
+    model: "Q7",
+    type: "SUV",
+    price: 0,
     kilometers: 78000,
     fuel: "Petrol",
     transmission: "Automatic",
     year: 2016,
     status: "Available",
-    image: mercedesBlack,
-    images: [mercedesBlack],
-    description: "Stunning black E-Class with AMG package. Luxury meets performance.",
+    image: audiQ7Img,
+    images: [audiQ7Img],
+    description:
+      "2016 Audi Q7 Quattro with seven seats, panoramic sunroof, and black leather interior. Spacious family SUV.",
   },
   {
-    id: "4",
-    name: "Volkswagen Golf 7",
-    make: "Volkswagen",
-    model: "Golf",
-    type: "Hatchback",
-    price: 225000,
-    kilometers: 89000,
-    fuel: "Petrol",
-    transmission: "Automatic",
-    year: 2015,
-    status: "Reserved",
-    image: golfSilver,
-    images: [golfSilver],
-    description: "Reliable Golf 7 in elegant silver. Great all-rounder with automatic transmission.",
-  },
-  {
-    id: "5",
-    name: "BMW 320i Sport",
-    make: "BMW",
-    model: "3 Series",
-    type: "Sedan",
-    price: 345000,
-    kilometers: 55000,
+    id: "3",
+    name: "Land Rover Discovery Sport",
+    make: "Land Rover",
+    model: "Discovery Sport",
+    type: "SUV",
+    price: 175000,
+    kilometers: 73999,
     fuel: "Petrol",
     transmission: "Automatic",
     year: 2017,
     status: "Available",
-    image: bmwWhite,
-    images: [bmwWhite],
-    description: "Sleek white BMW 320i with Sport package. The ultimate driving machine.",
+    image: discoverySportImg,
+    images: [discoverySportImg],
+    description:
+      "2017 Discovery Sport with panoramic sunroof. Available on order; shipping and pricing on enquiry.",
+  },
+  {
+    id: "4",
+    name: "Jaguar F-PACE 25T Prestige",
+    make: "Jaguar",
+    model: "F-PACE",
+    type: "SUV",
+    price: 0,
+    kilometers: 92000,
+    fuel: "Petrol",
+    transmission: "Automatic",
+    year: 2018,
+    status: "Available",
+    image: jaguarFpaceImg,
+    images: [jaguarFpaceImg],
+    description:
+      "2018 Jaguar F-PACE 25T Prestige (RWD) with panoramic sunroof and black interior. Around 92,000 km.",
+  },
+  {
+    id: "5",
+    name: "Mazda CX-3",
+    make: "Mazda",
+    model: "CX-3",
+    type: "SUV",
+    price: 0,
+    kilometers: 98000,
+    fuel: "Petrol",
+    transmission: "Automatic",
+    year: 2018,
+    status: "Available",
+    image: mazdaCx3Img,
+    images: [mazdaCx3Img],
+    description:
+      "2018 Mazda CX-3 with sunroof and leather seats. Well maintained, 98,000 km. Available on order.",
   },
   {
     id: "6",
-    name: "BMW M135i",
-    make: "BMW",
-    model: "1 Series",
+    name: "Mazda Demio",
+    make: "Mazda",
+    model: "Demio",
     type: "Hatchback",
-    price: 395000,
-    kilometers: 42000,
+    price: 75000,
+    kilometers: 64000,
+    fuel: "Petrol",
+    transmission: "Automatic",
+    year: 2014,
+    status: "Available",
+    image: mazdaDemioImg,
+    images: [mazdaDemioImg],
+    description:
+      "2014 Mazda Demio, 64,000 km. Price includes shipping and NamRA. Available on order.",
+  },
+  {
+    id: "7",
+    name: "Mercedes-Benz A250",
+    make: "Mercedes-Benz",
+    model: "A250",
+    type: "Hatchback",
+    price: 138000,
+    kilometers: 98000,
     fuel: "Petrol",
     transmission: "Automatic",
     year: 2015,
     status: "Available",
-    image: bmwBlack,
-    images: [bmwBlack],
-    description: "Powerful M135i in black. Thrilling performance in a compact package.",
-  },
-  {
-    id: "7",
-    name: "Audi Q3 2.0 TDI",
-    make: "Audi",
-    model: "Q3",
-    type: "SUV",
-    price: 295000,
-    kilometers: 68000,
-    fuel: "Diesel",
-    transmission: "Automatic",
-    year: 2016,
-    status: "Sold",
-    image: audiQ3,
-    images: [audiQ3],
-    description: "Versatile Audi Q3 SUV with diesel efficiency. Perfect for families.",
+    image: mercedesA250Img,
+    images: [mercedesA250Img],
+    description:
+      "2015 Mercedes-Benz A250 with panoramic sunroof. 98,000 km. Available on order.",
   },
   {
     id: "8",
-    name: "Audi A3 Sportback",
-    make: "Audi",
-    model: "A3",
+    name: "Volkswagen Golf 7R",
+    make: "Volkswagen",
+    model: "Golf 7R",
     type: "Hatchback",
-    price: 265000,
-    kilometers: 73000,
+    price: 0,
+    kilometers: 71999,
+    fuel: "Petrol",
+    transmission: "Automatic",
+    year: 2015,
+    status: "Available",
+    image: vwGolf7rImg,
+    images: [vwGolf7rImg],
+    description:
+      "2015 Volkswagen Golf 7R with panoramic sunroof, black leather interior, and lots of extras. Around 72,000 km.",
+  },
+  {
+    id: "9",
+    name: "Volkswagen Touran",
+    make: "Volkswagen",
+    model: "Touran",
+    type: "MPV",
+    price: 0,
+    kilometers: 99899,
     fuel: "Petrol",
     transmission: "Automatic",
     year: 2016,
     status: "Available",
-    image: audiA3,
-    images: [audiA3],
-    description: "Elegant Audi A3 Sportback. Premium German engineering at its finest.",
-  },
-  {
-    id: "9",
-    name: "Volkswagen Polo 1.0 TSI",
-    make: "Volkswagen",
-    model: "Polo",
-    type: "Hatchback",
-    price: 285000,
-    kilometers: 22000,
-    fuel: "Petrol",
-    transmission: "Manual",
-    year: 2021,
-    status: "Available",
-    image: poloNewRed,
-    images: [poloNewRed],
-    description: "Nearly new VW Polo in striking red. Low mileage, still under warranty.",
+    image: vwTouranImg,
+    images: [vwTouranImg],
+    description:
+      "2016 Volkswagen Touran with leather seats and double sunroof. Around 99,900 km. Available on order.",
   },
 ];
 
-export const makes = ["All", "Volkswagen", "BMW", "Mercedes-Benz", "Audi"];
-export const types = ["All", "Sedan", "Hatchback", "SUV", "Pickup"];
+export function formatCarPrice(car: Car): string {
+  if (car.price <= 0) return "On request";
+  return `N$${car.price.toLocaleString()}`;
+}
+
+export const makes = [
+  "All",
+  "Audi",
+  "Jaguar",
+  "Land Rover",
+  "Mazda",
+  "Mercedes-Benz",
+  "Volkswagen",
+];
+
+export const types = ["All", "Sedan", "Hatchback", "SUV", "MPV"];

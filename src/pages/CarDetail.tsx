@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { cars } from "@/data/cars";
+import { cars, formatCarPrice } from "@/data/cars";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowLeft, Fuel, Gauge, Settings2, Calendar } from "lucide-react";
@@ -25,7 +25,7 @@ const CarDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-24 md:pt-28 pb-16 px-4">
+      <div className="pt-36 md:pt-40 pb-16 px-4">
         <div className="container mx-auto max-w-5xl">
           <Link to="/inventory" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-6 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Inventory
@@ -43,7 +43,7 @@ const CarDetail = () => {
                 <h1 className="font-display text-3xl font-bold text-foreground">{car.name}</h1>
                 <span className={`text-xs font-semibold px-3 py-1 rounded-full ${statusClass[car.status]}`}>{car.status}</span>
               </div>
-              <p className="font-display text-2xl font-bold text-primary mb-6">N${car.price.toLocaleString()}</p>
+              <p className="font-display text-2xl font-bold text-primary mb-6">{formatCarPrice(car)}</p>
 
               <p className="text-muted-foreground mb-6">{car.description}</p>
 

@@ -28,22 +28,22 @@ const Header = () => {
         <div className="container mx-auto px-4 py-1.5 flex flex-col gap-1 text-xs text-white md:flex-row md:items-center md:justify-between md:text-sm">
           <div className="flex items-center gap-2">
             <MapPin className="w-3 h-3 md:w-4 md:h-4" />
-            <span>140 RENDSBURGER ST LAFRENZ WINDHOEK</span>
+            <span>Windhoek, Namibia</span>
           </div>
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="tel:+264811705060"
+              href="tel:+264813120182"
               className="inline-flex items-center gap-1 hover:text-primary transition-colors"
             >
               <Phone className="w-3 h-3 md:w-4 md:h-4" />
-              <span>+264 81 170 5060</span>
+              <span>+264 81 312 0182</span>
             </a>
             <a
-              href="mailto:smd@shipdenk.com"
+              href="mailto:info@ndjiva.com"
               className="inline-flex items-center gap-1 hover:text-primary transition-colors"
             >
               <Mail className="w-3 h-3 md:w-4 md:h-4" />
-              <span>smd@shipdenk.com</span>
+              <span>info@ndjiva.com</span>
             </a>
           </div>
         </div>
@@ -56,9 +56,16 @@ const Header = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Shipdenk" className="h-12 md:h-16" />
+        <div className="container mx-auto px-4 flex items-center justify-between min-h-[5rem] md:min-h-[6.5rem] py-2 md:py-3">
+        <Link to="/" className="flex items-center shrink-0 min-w-0">
+          <img
+            src={logo}
+            alt="Ndiva Auto"
+            width={1000}
+            height={400}
+            className="h-14 w-auto max-w-[min(100%,340px)] md:h-[4.75rem] md:max-w-[440px] lg:h-20 lg:max-w-[500px] object-contain object-left"
+            decoding="async"
+          />
         </Link>
 
         {/* Desktop Nav */}
